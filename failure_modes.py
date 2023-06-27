@@ -45,27 +45,3 @@ def check_for_gbw(directory):
     else:
         return True
 
-##############################################################################################################
-
-#def ERR_lst_loop_tmp(i):
-#    identifier = str(i).zfill(6)
-#    directory = "/groups/GaoGroup/dmukasa/ML_DFT/QM9_PM3_copy/dsgdb9nsd_" + identifier + ".xyz"
-#    if check_for_tmp(directory) or check_for_gbw(directory):
-#        index = int(identifier)-1
-#        print("ERROR IN: ", directory)
-#        print("Index = ", index)
-#        ERR_lst_tmp.append(index)
-#
-#startTime = time.time()
-#
-#ERR_lst_tmp = []
-#num_files = 133885
-#
-#print(check_directory_for_files("/groups/GaoGroup/dmukasa/ML_DFT/QM9_PM3_copy/dsgdb9nsd_033702.xyz"))
-#Parallel(n_jobs=-1,backend="threading")(delayed(ERR_lst_loop_tmp)(i) for i in tqdm(range(1,num_files+1)))
-#
-#executionTime = (time.time() - startTime)
-#print('Time to make names list in minutes: ' + str(executionTime/60))
-#
-#print(ERR_lst_tmp)
-#np.savez_compressed('ERR_lst_tmp.npz', ERR_lst_tmp)
